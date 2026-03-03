@@ -1,0 +1,90 @@
+/* ============================================
+   Show 섹션 전체 레이아웃
+   ============================================ */
+
+/* 섹션 전체 컨테이너 */
+.show-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 150px 40px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 콘텐츠 중앙 정렬 컨테이너 */
+.show-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 10%;
+}
+
+
+/* ============================================
+   좌측: 프로필 이미지 영역
+   ============================================ */
+
+/* 원형 이미지 래퍼 */
+.show-image-wrapper {
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 프로필 이미지 */
+.show-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ============================================
+   우측: 텍스트 + 버튼 영역
+   ============================================ */
+
+/* 콘텐츠 컨테이너 */
+.show-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    color: var(--text-color);
+}
+
+/* 제목 */
+.show-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0px 7px 10px var(--accent-shadow-show);
+}
+
+/* 설명 텍스트 */
+.show-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--sub-text-color);
+}
+
+/* 버튼 간격 */
+.show-button {
+    margin-top: 10px;
+}

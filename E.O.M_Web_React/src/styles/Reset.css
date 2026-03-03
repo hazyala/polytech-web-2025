@@ -1,0 +1,8 @@
+/* ============================================
+   초기화 기본 스타일
+   ============================================ */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+ul, li { list-style: none; padding: 0; margin: 0; }
+button { cursor: pointer; border: none; background: none; }
