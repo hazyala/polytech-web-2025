@@ -1,0 +1,20 @@
+.wrapper{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid magenta;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.greenting{
+    padding-right: 20px;
+}
+
+h2{
+    margin: 20px;
+    background-color: magenta;
+    color: white;
+    padding: 15px;
+}

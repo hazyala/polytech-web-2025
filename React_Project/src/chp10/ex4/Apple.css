@@ -1,0 +1,225 @@
+/* Apple.css */
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://sf-fonts.apple.com/SFProDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://sf-fonts.apple.com/SFProDisplay-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+body {
+    font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7; /* 배경색 */
+    color: #1d1d1f; /* 기본 텍스트 색상 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.apple-shopping-page {
+    max-width: 2500px; /* 콘텐츠 최대 너비 */
+    margin: 0 auto;
+    padding: 0px 20px 0 20px;
+}
+
+.page-header {
+    text-align: left; /* 제목 좌측 정렬 */
+    margin-left: 80px;
+    border-bottom: 2px solid darkgray;
+}
+
+.page-title {
+    margin-top: 0;
+    font-size: 60px;
+    font-weight: 600; /* Semibold */
+    letter-spacing: -0.01em;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 80px;
+    color:#696969 ;
+}
+
+/* 캐러셀 래퍼 */
+.product-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 -20px; /* 좌우 버튼이 페이지 가장자리에 붙도록 음수 마진 */
+}
+
+/* 스크롤 버튼 */
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(210, 210, 215, 0.5);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #6e6e73;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 30;
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari 호환용이옵니다 */
+}
+
+.scroll-button.left {
+    left: 20px; /* 페이지 왼쪽 가장자리에 */
+}
+
+.scroll-button.right {
+    right: 20px; /* 페이지 오른쪽 가장자리에 */
+}
+
+.scroll-button:hover {
+    border-color: #b2b2b6;
+}
+
+/* 상품 그리드 래퍼 - 스크롤바 숨기기용 */
+.product-grid-wrapper {
+    overflow: hidden; /* 스크롤바 숨김 */
+    width: 100%;
+    padding: 0 60px; /* 버튼 공간 확보 */
+}
+
+/* 상품 그리드 - 실제 스크롤 영역 */
+.product-grid {
+    display: flex;
+    gap: 24px; /* 카드 사이 간격 */
+    overflow-x: scroll; /* 가로 스크롤 가능 */
+    scroll-snap-type: x mandatory; /* 카드 단위 스크롤 */
+    -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+    padding-bottom: 20px; /* 스크롤바가 콘텐츠를 가리지 않도록 */
+    padding-top: 10px;
+}
+
+.product-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari에서 스크롤바 숨김 */
+}
+.product-grid {
+    -ms-overflow-style: none; /* IE, Edge에서 스크롤바 숨김 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨김 */
+}
+
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 18px; /* 둥근 모서리 */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: 400px; /* 카드 너비 */
+    flex-shrink: 0; /* 카드 크기가 줄어들지 않도록 */
+    scroll-snap-align: start; /* 스크롤 스냅 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내용 분배 */
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* 호버 시 약간 위로 */
+}
+
+.product-badge {
+    font-size: 20px;
+    font-weight: 600;
+    color: #bf4800; /* NEW 뱃지 색상 */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.product-card:nth-child(5) .product-badge,
+.product-card:nth-child(6) .product-badge,
+.product-card:nth-child(7) .product-badge {
+    color: #6e6e73; /* APPLE INTELLIGENCE 뱃지 색상 */
+}
+
+.product-name {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.product-image {
+    width: 90%; /* 이미지 크기 조절 */
+    max-height: 300px; /* 이미지 최대 높이 */
+    object-fit: contain; /* 비율 유지 */
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.color-swatches {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* 색상 점 사이 간격 */
+}
+
+.color-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.color-swatch:hover {
+    transform: scale(1.2);
+}
+
+.card-footer {
+    margin-top: auto; /* 하단으로 밀착 */
+    padding-top: 20px;
+    border-top: 1px solid #f5f5f7; /* 구분선 */
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 400;
+    padding: 11px 11px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    max-width: 160px; /* 버튼 최대 너비 */
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
