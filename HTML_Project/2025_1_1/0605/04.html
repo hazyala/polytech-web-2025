@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src= "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(   
+           
+            function(){
+                $("img").attr({
+                    alt: "JQuery를 사용하여 이미지의 속성을 변경합니다.",
+                    src: function(index) {
+                        let size = (index + 1) * 100;
+                        return "https://placehold.co/"+ size +"x300";
+                    }
+                });
+            }
+        );
+        
+    </script>
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+</body>
+</html>ㄴ

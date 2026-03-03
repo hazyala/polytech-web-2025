@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 입력 양식 그룹으로 묶기 </title>
+    <style>
+        *{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <form action="01.html" method="get">
+        <fieldset>
+            <legend> 입력 양식 </legend>
+                <table>
+                    <tr>
+                        <td> 이름 : </td>
+                        <td> <input type = "text"> </td>
+                    </tr>
+                    <tr>
+                        <td> 이메일 : </td>
+                        <td> <input type = "email"> </td>
+                    </tr>
+                    <tr>
+                        <td> 남기고 싶은 말 : </td>
+                        <td> <textarea name= "comment" cols="20" rows="10"> 상세주소를 여기에 입력해주세요. </textarea>   
+                        <!--cols는 가로폭 rows는 세로폭 지정자 / 
+                        textarea 주의사항 : 상세 주소를 여기에 입력하라는 글자를 줄바꿈하거나 하게되면 줄 바꿈이나 띄어쓰기 까지 입력되어 출력창의 값이 변화하게 됨-->                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <input type = "submit" value="가입"> 
+                        </td>
+                    </tr>
+                </table>
+          
+        </fieldset>
+
+    </form>
+</body>
+</html>

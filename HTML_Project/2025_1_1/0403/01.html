@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택 가능한 입력 양식</title>
+</head>
+<body>
+   <form action = "../0327/01.html" method = "get">
+    <table>
+
+        <tr>
+            <td>
+                <label for="user name"> 이름 : </label> 
+            </td>
+            <td>
+                <input type="text" name="user name" id="user name">
+            </td>
+        </tr>
+
+        <tr>
+            <td>  성별 : </td>
+            <td> 
+                <input type="radio" name = " gender" id="male" value="m"> <!--id를 gender로 하지 않은 이유는 헷갈릴 수 있기 때문에 -->
+                <label for = "male"> 남성 </label>
+                <input type="radio" name = " gender" id="female" value="f">
+                <label for = "female"> 여성 </label>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                관심분야 : 
+            </td>
+            <td>
+                <select name="interest" multiple> <!-- select는 이 option 중 하나만 선택 가능하나 multiple 속성을 넣어주면 Ctrl/Shift키로 여러 개 선택 가능-->
+                    <option value="sports"> 스포츠 </option>
+                    <option value="music"> 음악 </option>
+                    <option value="movie"> 영화 </option>
+                    <option value="game"> 게임 </option>
+                    <option value="art"> 미술 </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                관심분야 (항목 그룹화): 
+            </td>
+            <td>
+                <select name="interest 2"> <!--단축키 Ctrl + H 하고 선택 영역을 드래그한 뒤 변경을 원하는 글자를 위에 변경하고자 하는 글자를 아래에 입력하고 Ctrl + Alt + Enter하면 동시에 변경 가능 -->
+                    <optgroup label="스포츠">
+                        <option value="soccer"> 축구 </option>
+                        <option value="basketball"> 농구 </option>
+                        <option value="baseball"> 야구 </option>
+                        <option value="tennis"> 테니스 </option>
+                    </optgroup>
+                    
+                    <optgroup label="음악">
+                        <option value="pop"> 팝 </option>
+                        <option value="rock"> 록 </option>
+                        <option value="hiphop"> 힙합 </option>
+                        <option value="jazz"> 재즈 </option>
+                    </optgroup>
+
+                    <optgroup label="영화">
+                        <option value="action"> 액션 </option>
+                        <option value="comedy"> 코미디 </option>
+                        <option value="drama"> 드라마 </option>
+                        <option value="horror"> 공포 </option>
+                    </optgroup>
+
+                    <optgroup label="게임">
+                        <option value="rpg"> 롤플레잉 </option>
+                        <option value="fps"> 1인칭 슈팅 </option>
+                        <option value="puzzle"> 퍼즐 </option>
+                        <option value="strategy"> 전략 </option>
+                    </optgroup>
+
+                    <optgroup label="미술"> 
+                        <option value="painting"> 회화 </option>
+                        <option value="sculpture"> 조각 </option>
+                        <option value="photography"> 사진 </option>
+                        <option value="design"> 디자인 </option>
+                    </optgroup>
+                </select>
+            </td>
+        </tr>
+        
+        <tr align="center">
+        <td>
+            <td colspan="2"></td>
+            <button type="submit"> 가입 </button> 
+        </td>
+        </tr>
+       
+    </table>
+   </form>
+</body>
+</html>

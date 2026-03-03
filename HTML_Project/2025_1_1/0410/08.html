@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조선택자에서 실수 할 수 있는 부분</title>
+    <style>
+        /* li > a:first-child{
+            color: blue;
+        } */
+        li:first-child > a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>***<a href="#">첫번째 주의사항</a></li>
+        <li>***<a href="#">두번째 주의사항</a></li>
+        <li>***<a href="#">세번째 주의사항</a></li>
+        <li>***<a href="#">네번째 주의사항</a></li>
+        <li>***<a href="#">다섯번째 주의사항</a></li>
+    </ul>
+</body>
+</html>

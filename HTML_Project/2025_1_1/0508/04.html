@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>절대위치 설정</title>
+    <style>
+        #container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border: 2px solid black;
+        }
+        .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        #red {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+        }
+        #yellow {
+            background-color: yellow;
+            top: 20px;
+            right: 20px;
+        }
+        #green {
+            background-color: green;
+            bottom : 20px;
+            left: 20px;
+        }
+        #blue {
+            background-color: blue;
+            bottom: 20px;
+            right:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>절대 위치를 요소에 설정하려면 부모요소는 상대위치를 설정하여 기준이 되어야 한다.</h1>
+    <div id = "container">
+    <div class = " circle" id = "red"></div>
+    <div class = " circle" id = "yellow"></div>
+    <div class = " circle" id = "green"></div>
+    <div class = " circle" id = "blue"></div>
+    </div>
+</body>
+</html>

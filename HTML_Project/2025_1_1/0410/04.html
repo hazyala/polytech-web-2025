@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>자손 선택자</title>
+     <style>
+         #first>h1{
+             color: brown;
+             background-color: lightyellow;
+         }
+ 
+         #second>h1{
+             color: white;
+             background-color: black;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="first">
+         <h1>자손 선택자 연습 1</h1>
+         <div>
+             <h1>자손 선택자 연습 1의 하위 요소</h1>
+         </div>
+         <h2>자손은 하위 직계를 의미한다.</h2>
+     </div>
+ 
+     <div id="second">
+         <h1>자손 선택자 연습 2</h1>
+         <div>
+             <h1>자손 선택자 연습 2의 하위 요소</h1>
+         </div>
+         <h2>자손은 하위 직계를 의미한다.</h2>
+     </div>
+ </body>
+ </html>

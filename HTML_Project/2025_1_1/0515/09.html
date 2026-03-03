@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let weight = 70; // 체중(kg)
+        let height = 175; // 키(cm)
+
+        // BMI 계산
+        let bmi = weight / Math.pow(height / 100, 2);
+    
+        let result = "";
+
+        if (bmi < 18.5) {
+            result = "저";
+        } else if (bmi < 22.9) {
+            result = "정상";
+        } else if (bmi < 29.9) {
+            result = "과";
+        } else if (bmi < 34.9) {
+            result = "비만";
+        } else {
+            result = "고도 비만";
+        } 
+        
+        alert("당신의 BMI는 " + bmi.toFixed(2) + "㎏ / ㎡입니다.\n 따라서 귀하는 " + result + "체중입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

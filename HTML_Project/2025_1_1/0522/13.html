@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> querySelectorALL 연습</title>
+    <script>
+        let colors = ['red', 'blue', 'green'];
+        let bgColors = ['black', 'yellow', 'orange'];
+        let texts = ['한국 폴리텍 대학', '인공지능 소프트웨어과', '서울 정수 캠퍼스 1학년'];
+        function changeStyle() {
+            let t1 = document.querySelectorAll('h1');
+            for (let i = 0; i < t1.length; i++) {
+                t1[i].style.backgroundColor = bgColors[i];
+                t1[i].style.color = colors[i];
+                t1[i].innerHTML = texts[i];
+            }
+        }
+    </script>
+</head>
+<body onload="changeStyle()">
+    <h1>Korea Politechnics University</h1>
+    <h1>Artificial Intelligence Software</h1>
+    <h1>AI Software</h1> 
+</body>
+</html>

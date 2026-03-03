@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투명 호버 글래스 버튼</title>
+    <!-- css 태그 -->
+    <style>
+        html,body{
+            height: 100%;
+            min-height: 500vh;
+            margin: 0;
+        }
+
+        .background{
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            color: tomato;
+        }
+
+        .glass{
+            position :fixed;
+            inset : 50% auto auto 50%;
+            transform : translate(-50%,-50%);
+            width : 20rem;
+            height: 20rem;
+            border-radius : 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid transparent;
+            box-shadow: 0 0 0 2px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="background"></div>
+        <button id="btn" class="glass">Start</button> 
+            <text>
+                <textPath href="#path" startOffset="50%" text-anchor="middle">
+                    Today's luck
+                </textPath>
+            </text>
+
+    
+
+    <svg>
+        
+    </svg>    
+
+</body>
+</html>

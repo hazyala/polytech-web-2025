@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let img;
+        function changeImage(){
+            img = document.getElementById("img1");
+            img.src = "imgs/jang.jpg"
+            img.width = 600;
+        }
+        function reset(){
+            img.src = "";
+            img.width = 0;
+        }
+
+        function selectedChangeImage(){
+            let select = document.querySelector("select");
+            img = document.getElementById("img1");
+            let index = select.selectedIndex;
+            img.src = select.options[index].value;
+        }
+
+        function cheerUp(){
+            // 사용자 정의 속성을 body요소 객체에 설정
+            document.body.setAttribute("data-cheerup", "Ive is the best~~ ");
+            alert(document.body.getAttribute("data-cheerup"));
+        }
+
+        let clock;
+        function callSetClock(){
+            clock = document.querySelector("h1");
+            setClock();
+            setInterval(setClock, 1000);
+        }
+
+        function setClock(){
+            let now = new Date();
+            clock.innerHTML = now.toString();
+        }
+    </script>
+</head>
+<body onload="callSetClock()">
+    <hr>
+    <button onclick="changeImage()">장원영</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="cheerUp()">CHEER-UP</button>
+    <br>
+    <select onchange="selectedChangeImage()">
+        <option value="">Select an image</option>
+        <option value="imgs/ive01.jpg">장원영</option>
+        <option value="imgs/ive02.jpg">안유진</option>
+        <option value="imgs/ive03.jpg">레이</option>
+        <option value="imgs/ive04.jpg">리즈</option>
+    </select>
+    <hr>
+    <img id="img1">
+    <hr>
+    <h1></h1>
+    <hr>
+</body>
+</html>

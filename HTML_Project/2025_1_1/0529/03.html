@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let output = "";
+        let totalDiv;
+        let divs; 
+
+        function init(){
+            totalDiv = document.getElementById("totalDiv");
+            for(let i=0; i < 256; i++){
+                output += "<div></div>"
+            }
+        }
+        function changeGradation(){
+            totalDiv.innerHTML = output;
+
+            divs = document.querySelectorAll("div");
+            for(let i=1; i<divs.length; i++){
+                divs[i].style.height="1px";
+                divs[i].style.backgroundColor = "rgb("+ (i-1) +", "+ (i-1) +", "+ (i-1) +")"
+            }
+        }
+
+        function reset(){
+            for(let i=1; i < 257; i++){
+                divs[i].style.backgroundColor = "rgb(255, 255, 255)";
+            }
+        }
+    </script>
+    <style>
+        #totalDiv{
+            width: 256px;
+            height: 256px;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 0;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <hr>
+    <button onclick="changeGradation()">Gradation</button>
+    <button onclick="reset()">Reset</button>
+    <hr>
+    <div id="totalDiv"></div>
+</body>
+</html>

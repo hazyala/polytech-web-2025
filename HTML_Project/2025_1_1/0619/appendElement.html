@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(let i = 0; i < 10; i++){
+                $('<h1>New Create Element '+ i +'</h1>').css({
+                    backgroundColor: 'black',
+                    color: 'red',
+                }).appendTo('body');
+            }   
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

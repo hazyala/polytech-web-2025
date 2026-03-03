@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callAlert() {
+            alert("알림메시지");
+        }
+
+        function overImage(img1) {
+            img1.src = "imgs/ive01.jpg";
+        }
+
+         function outImage(img1) {
+            img1.src = "imgs/ive04.jpg";
+        }
+
+         function overImageId() {
+            let img1 = document.getElementById("img3");
+            img1.src = "imgs/ive02.jpg";
+        }
+
+         function outImageId() {
+            let img1 = document.getElementById("img3");
+            img1.src = "imgs/ive01.jpg";
+        }
+        
+        function increamentStar(btn) {
+            btn.textContent = btn.textContent + "★";
+        }
+
+        function removeDefault() {
+           event.preventDefault();
+        }
+
+    </script>
+</head>
+<body>
+    <a href="../0529/04.html" onclick="removeDefault()">자바스크립트 연습</a>
+    <button onclick="callAlert()">알림메시지</button>
+    <br><br>
+    <button onclick="increamentStar(this)">버튼 - </button>
+    <br><br>
+    <img src="imgs/ive01.jpg" onmouseover="this.src='imgs/ive02.jpg'" onmouseout="this.src='imgs/ive03.jpg'"/>
+    <br><br>
+    <img src="imgs/ive02.jpg" onmouseover="overImage(this)" onmouseout="outImage(this)"/>
+        <br><br>
+    <img src="imgs/ive03.jpg" onmouseover="overImageId()" onmouseout="outImageId()" id="img3"/>
+</body>
+</html>

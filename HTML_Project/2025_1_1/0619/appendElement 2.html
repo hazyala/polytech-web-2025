@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let i = 0;
+            $('#btn').click(function(){
+                $('<h1>New Create Element '+ i +'</h1>').css({
+                    backgroundColor: 'magenta',
+                    color: 'white',
+                }).appendTo('body');
+                i++;
+            });
+        })
+    </script>
+</head>
+<body>
+    <button id = "btn">Add H1 Element</button>
+</body>
+</html>
