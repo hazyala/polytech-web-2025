@@ -1,0 +1,53 @@
+# GitHub Actions를 활용한 GitHub Pages 자동 배포 스크립트임
+name: Deploy E.O.M_WEB to Pages
+
+# 이벤트(on): 어떤 상황에서 이 스크립트를 실행할지 정의함
+on:
+  push:
+    # branches: 코드가 푸시(push)되는 대상 브랜치를 지정함 (main 브랜치 기준)
+    branches: ["main"] 
+
+# 권한(permissions): GitHub 보안 토큰(Token)이 가질 접근 권한을 설정함
+permissions:
+  # contents: 저장소의 코드를 읽을 수 있는 권한을 부여함
+  contents: read
+  # pages: GitHub Pages에 웹사이트 자원을 기록하고 배포할 수 있는 권한을 부여함
+  pages: write
+  # id-token: GitHub 환경에서 안전하게 인증하기 위한 권한을 부여함
+  id-token: write
+
+# 동시성(concurrency): 여러 배포 명령이 겹칠 때 충돌을 방지하도록 제어함
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# 작업(jobs): 실제 클라우드 서버에서 실행될 작업(Job)들의 묶음임
+jobs:
+  # deploy: 웹페이지 배포 작업을 정의함
+  deploy:
+    # environment: 배포 대상 환경을 GitHub Pages로 명시함
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # runs-on: 이 스크립트가 실행될 가상 운영체제(OS) 환경을 최신 우분투(Ubuntu) 리눅스로 지정함
+    runs-on: ubuntu-latest
+    steps:
+      # 단계(steps) 1: 저장소의 코드를 가상 환경으로 내려받음 (Checkout)
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 단계(steps) 2: GitHub Pages 배포를 위한 기본 서버 환경 설정을 진행함
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # 단계(steps) 3: 배포할 특정 폴더를 아티팩트(Artifact, 서버로 전송할 작업 결과물 덩어리)로 업로드함
+      - name: Upload Subfolder Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # path(매개변수): 전체 저장소 중 배포할 대상 폴더인 E.O.M_WEB 경로만 지정함
+          path: './E.O.M_WEB'
+
+      # 단계(steps) 4: 업로드된 아티팩트를 실제 GitHub Pages 라이브 서버에 배포함
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
