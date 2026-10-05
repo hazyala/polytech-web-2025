@@ -1,5 +1,7 @@
 # Echo of Movement — React 화면
 
+React 버전의 공개 배포 주소는 아직 확인되지 않았다. [원본 정적 화면 데모](https://hazyala.github.io/polytech-web-2025/)와 [React 실행 안내](#실행)를 확인할 수 있다.
+
 “움직임이 곧 브랜드가 되는 순간”을 홈페이지로 옮긴 E.O.M의 React 버전.
 
 댄서 포트폴리오·모집·행사·연습 파트너를 SHOW·CAST·HYPE·LINK 섹션으로 구성한다. 기존 정적 버전의 디자인과 컨셉을 페이지·공통 컴포넌트·custom hook으로 나눴다. 성능 개선 수치를 측정한 프로젝트로 소개하지 않는다.
@@ -40,7 +42,7 @@ npm ci
 npm start
 ```
 
-기본 개발 주소는 localhost:3000이다. `npm run build`는 이 폴더의 build를 생성한다. package.json의 homepage는 이전 독립 저장소 `/E.O.M_Web_React` 경로이며 BrowserRouter는 PUBLIC_URL을 basename으로 사용한다. 이 설정과 통합 저장소 root workflow의 정적 폴더 배포를 혼동하지 않는다.
+기본 개발 주소는 localhost:3000이다. `npm run build`는 이 폴더의 build를 생성한다. package.json의 homepage는 이전 독립 저장소 `/E.O.M_Web_React` 경로이며 BrowserRouter는 PUBLIC_URL을 basename으로 사용한다. 해당 기존 주소는 현재 404다. 공개 React 데모를 만들려면 별도 배포와 homepage/PUBLIC_URL 경로 설정이 필요하다. 통합 저장소 root workflow는 정적 폴더만 배포한다.
 
 ## 기존 화면 기록
 
