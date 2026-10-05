@@ -1,48 +1,15 @@
-# 🎧 Echo of Movement (E.O.M)
+# Echo of Movement — 정적 웹 버전
 
-**E.O.M**는 움직임이 브랜드가 되는 시대,  
-스트릿 댄서들을 위한 시크하고 다이나믹한 플랫폼형 홈페이지입니다.  
-공연, 배틀, 포트폴리오, 캐스팅까지—  
-댄서들의 서로간의 연결을 위한 새로운 시작을 염원하며 기획되었습니다.
+댄서 활동 경험에서 출발한 스트릿 댄서 커뮤니티 홈페이지. 공연·연습 파트너 구인, 포트폴리오 공유, 이벤트 정보를 SHOW·CAST·HYPE·LINK 섹션으로 표현한다.
 
----
+`index.html`은 홈, `login.html`은 로그인 화면이며 CSS·JavaScript와 기존 이미지로 구성한다. 사용자 DB·API backend 없이 동작하는 정적 화면이다. 원래 기획 의도와 서비스 구현 완료를 구분한다.
 
-## 🔗 링크
+저장소 루트에서 로컬 서버를 연다.
 
-👉 **Live Site**: [https://hazyala.github.io/E.O.M_WEB/](https://hazyala.github.io/E.O.M_WEB/)  
-👉 **GitHub Repo**: [https://github.com/hazyala/E.O.M_WEB.git](https://github.com/hazyala/E.O.M_WEB.git)
+```bash
+python3 -m http.server 8000 --directory E.O.M_WEB
+```
 
----
+localhost:8000에 접속한다. npm 빌드가 필요한 프로젝트는 아니다. root의 GitHub Actions는 이 폴더를 Pages artifact로 배포하도록 설정되어 있다. 이전 독립 저장소의 주소는 현재 배포 상태를 확인하는 근거로 사용하지 않는다.
 
-## 📖 플랫폼 제작 배경
-
-과거 댄서로 활동했던 경험에서 출발한 본 프로젝트는  
-공연·연습 파트너 구인, 포트폴리오 공유, 이벤트 정보 접근의 불편함을 개선하고자 합니다.  
-기존 인스타그램 DM, 오픈채팅방, 지인에 의존하던 비공식적 소통 방식을 벗어나  
-**하나의 플랫폼에서 모든 것을 해결할 수 있도록** 기획되었습니다.
-
----
-
-## 💡 주요 기능 섹션
-
-| 섹션명 | 설명 |
-|--------|------|
-| **SHOW** | 댄서 개인의 포트폴리오 소개 섹션 |
-| **CAST** | 캐스팅 카드 스타일의 구인 공고 공간 |
-| **HYPE** | 이벤트 · 배틀 · 워크숍 등 씬 내 소식 모음 |
-| **LINK** | 연습 상대 / 팀원 매칭 / 정보 공유 네트워킹 섹션 |
-
----
-
-## 🔧 사용 기술
-
-- HTML5 / CSS3 / JavaScript 기반 웹사이트
-- 반응형 레이아웃 적용 (모바일, 태블릿, 데스크탑 대응)
-- 고정 배경 이미지 및 통일된 UI/UX 스타일
-- Google Fonts 활용: Irish Grover, Pacifico, Inter
-- GitHub Pages 배포
-
----
-
-> _“We don’t just move. We echo.”_  
-> 움직임이 말이 되고, 연결이 시작되는 플랫폼
+React로 옮긴 구현은 [React Edition](../E.O.M_Web_React/README.md)에 있다.
