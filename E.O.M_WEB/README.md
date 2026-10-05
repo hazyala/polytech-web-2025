@@ -12,6 +12,6 @@
 python3 -m http.server 8000 --directory E.O.M_WEB
 ```
 
-localhost:8000에 접속한다. npm 빌드가 필요한 프로젝트는 아니다. root의 GitHub Actions는 이 폴더를 Pages artifact로 배포하도록 설정되어 있다. 위 주소에서 홈페이지 이미지와 login.html 이동을 확인했다. 이전 독립 저장소 `/E.O.M_WEB/` 주소는 404여서 현재 통합 저장소의 주소로 안내한다.
+localhost:8000에 접속한다. npm 빌드가 필요한 프로젝트는 아니다. root의 GitHub Actions는 이 폴더를 Pages artifact로 배포하도록 설정되어 있다. 공개 주소는 현재 통합 저장소의 Pages URL을 사용한다.
 
 React로 옮긴 구현은 [React Edition](../E.O.M_Web_React/README.md)에 있다.

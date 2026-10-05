@@ -10,6 +10,6 @@ npm ci
 npm start
 ```
 
-저장소 루트 기준이다. package.json의 react-scripts가 개발 서버·빌드·테스트를 실행한다. `npm run build`는 정적 build를 만든다. 수업 중 다른 예제를 볼 때 index.js의 선택 컴포넌트를 바꾸던 구조이며 이번 작업에서는 코드를 변경하지 않았다.
+저장소 루트 기준이다. package.json의 react-scripts가 개발 서버·빌드·테스트를 실행한다. `npm run build`는 정적 build를 만든다. 수업 중 다른 예제를 볼 때 index.js의 선택 컴포넌트를 바꾸던 구조다.
 
 이 프로젝트에는 REST API·DB·독립 서비스 배포가 없다. E.O.M 화면은 [별도 하위 프로젝트](../E.O.M_Web_React/README.md)에서 확인한다.
