@@ -4,7 +4,7 @@ React 버전의 공개 배포 주소는 아직 확인되지 않았다. [원본 �
 
 “움직임이 곧 브랜드가 되는 순간”을 홈페이지로 옮긴 E.O.M의 React 버전.
 
-댄서 포트폴리오·모집·행사·연습 파트너를 SHOW·CAST·HYPE·LINK 섹션으로 구성한다. 기존 정적 버전의 디자인과 컨셉을 페이지·공통 컴포넌트·custom hook으로 나눴다. 성능 개선 수치를 측정한 프로젝트로 소개하지 않는다.
+댄서 포트폴리오·모집·행사·연습 파트너를 SHOW·CAST·HYPE·LINK 섹션으로 구성한다. 기존 정적 버전의 디자인과 컨셉을 페이지·공통 컴포넌트·custom hook으로 나눴다.
 
 ![홈 화면](README/1.png)
 
@@ -12,7 +12,7 @@ React 버전의 공개 배포 주소는 아직 확인되지 않았다. [원본 �
 
 `App.jsx`는 ThemeProvider와 BrowserRouter 안에 공통 Header/Footer, `/` Home과 `/login` Login route를 둔다. `ThemeContext`는 localStorage의 theme을 읽고 HTML data-theme과 저장 값을 갱신한다. `UseTypewriter`는 Hero의 타이핑 효과, framer-motion은 섹션·폼 전환에 사용한다.
 
-Login은 입력값과 alert를 처리하는 UI다. 서버 인증·토큰·사용자 DB는 없으므로 로그인 완료 alert를 실제 가입·인증 결과로 보지 않는다.
+Login은 입력값과 alert를 처리하는 UI다. 로그인 버튼은 alert를 표시하며 서버 인증·토큰·사용자 DB에는 연결되지 않는다.
 
 | 역할 | 기술 |
 |---|---|
