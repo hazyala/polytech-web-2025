@@ -1,6 +1,6 @@
 # E.O.M 웹 화면과 React 수업 기록
 
-[E.O.M 정적 웹 데모](https://hazyala.github.io/polytech-web-2025/)
+[React 웹 데모](https://hazyala.github.io/polytech-web-2025/E.O.M_Web_React/) · [정적 웹 데모](https://hazyala.github.io/polytech-web-2025/)
 
 스트릿 댄서 커뮤니티 E.O.M의 정적 화면·React 구현과 HTML/React 수업 예제를 모은 저장소.
 
@@ -23,4 +23,4 @@
 
 React 버전은 해당 하위 폴더에서 `npm ci`, `npm start`를 사용한다. 정적 버전은 HTML을 열거나 로컬 HTTP 서버로 확인한다. 각 폴더 README에 실행 절차가 있다.
 
-`.github/workflows/deploy.yml`은 `main` push 시 `E.O.M_WEB/`만 GitHub Pages artifact로 올린다. React build를 같은 workflow가 배포하는 구조가 아니다. 현재 정적 사이트는 위 GitHub Pages 주소에서 확인할 수 있다. 예전 `/E.O.M_WEB/`·`/E.O.M_Web_React/` 주소는 404이며 React 버전의 별도 배포가 필요하다.
+`.github/workflows/deploy.yml`은 `main` push 시 React를 빌드하고 정적 HTML과 함께 GitHub Pages에 배포한다. 정적 화면은 저장소 URL의 루트, React는 `E.O.M_Web_React/` 경로에서 열린다.

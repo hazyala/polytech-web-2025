@@ -128,7 +128,7 @@ export default function Login() {
         <div className={`login-page ${isSignUp ? 'is-signup' : ''}`}>
 
             {/* 좌측 영역: 타이핑 애니메이션 + 배경 이미지 */}
-            <div className="login-visual">
+            <div className="login-visual" style={{ backgroundImage: `url("${process.env.PUBLIC_URL}/img/login.jpg")` }}>
                 <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     <Link to="/">{displayText}</Link>
                 </motion.h1>

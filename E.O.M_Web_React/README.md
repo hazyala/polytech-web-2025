@@ -1,6 +1,6 @@
 # Echo of Movement — React 화면
 
-React 버전의 공개 배포 주소는 아직 확인되지 않았다. [원본 정적 화면 데모](https://hazyala.github.io/polytech-web-2025/)와 [React 실행 안내](#실행)를 확인할 수 있다.
+[React 웹 데모](https://hazyala.github.io/polytech-web-2025/E.O.M_Web_React/) · [정적 웹 데모](https://hazyala.github.io/polytech-web-2025/)
 
 “움직임이 곧 브랜드가 되는 순간”을 홈페이지로 옮긴 E.O.M의 React 버전.
 
@@ -10,14 +10,14 @@ React 버전의 공개 배포 주소는 아직 확인되지 않았다. [원본 �
 
 ## 화면을 구성하는 코드
 
-`App.jsx`는 ThemeProvider와 BrowserRouter 안에 공통 Header/Footer, `/` Home과 `/login` Login route를 둔다. `ThemeContext`는 localStorage의 theme을 읽고 HTML data-theme과 저장 값을 갱신한다. `UseTypewriter`는 Hero의 타이핑 효과, framer-motion은 섹션·폼 전환에 사용한다.
+`App.jsx`는 ThemeProvider와 HashRouter 안에 공통 Header/Footer, `/` Home과 `/login` Login route를 둔다. `ThemeContext`는 localStorage의 theme을 읽고 HTML data-theme과 저장 값을 갱신한다. `UseTypewriter`는 Hero의 타이핑 효과, framer-motion은 섹션·폼 전환에 사용한다.
 
 Login은 입력값과 alert를 처리하는 UI다. 로그인 버튼은 alert를 표시하며 서버 인증·토큰·사용자 DB에는 연결되지 않는다.
 
 | 역할 | 기술 |
 |---|---|
 | 화면 | React 19, React DOM |
-| route | react-router-dom 7, BrowserRouter |
+| route | react-router-dom 7, HashRouter |
 | 상태 | Context, useState/useEffect, localStorage |
 | 애니메이션 | framer-motion 12, custom hook |
 | 빌드 | Create React App / react-scripts 5 |
@@ -42,7 +42,13 @@ npm ci
 npm start
 ```
 
-기본 개발 주소는 localhost:3000이다. `npm run build`는 이 폴더의 build를 생성한다. package.json의 homepage는 이전 독립 저장소 `/E.O.M_Web_React` 경로이며 BrowserRouter는 PUBLIC_URL을 basename으로 사용한다. 해당 기존 주소는 현재 404다. 공개 React 데모를 만들려면 별도 배포와 homepage/PUBLIC_URL 경로 설정이 필요하다. 통합 저장소 root workflow는 정적 폴더만 배포한다.
+기본 개발 주소는 localhost:3000이다. `npm run build`는 `build/`에 정적 파일을 생성한다.
+
+## GitHub Pages 배포
+
+`main`에 push하면 `.github/workflows/deploy.yml`이 React를 빌드하고 정적 HTML과 함께 Pages에 배포한다. 정적 홈페이지는 저장소 URL의 루트, React는 `E.O.M_Web_React/` 경로에 있다. `package.json`의 homepage를 기준으로 JavaScript·CSS·이미지 주소를 만든다.
+
+라우팅은 HashRouter를 사용한다. 로그인 주소는 `E.O.M_Web_React/#/login`이며 직접 열기와 새로고침 모두 같은 정적 entry에서 시작한다. 이 배포는 화면 프로토타입이며 로그인 서버를 포함하지 않는다.
 
 ## 기존 화면 기록
 

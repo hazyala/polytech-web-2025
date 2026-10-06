@@ -3,7 +3,7 @@
 // ============================================
 
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -19,7 +19,7 @@ function App() {
         // 전역 라이트모드 다크모드 제공
         <ThemeProvider>
             {/* 라우터 설정 */}
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <HashRouter>
                 {/* 공통 헤더 */}
                 <Header />
 
@@ -33,7 +33,7 @@ function App() {
 
                 {/* 공통 푸터 */}
                 <Footer />
-            </BrowserRouter>
+            </HashRouter>
         </ThemeProvider>
     );
 }

@@ -57,7 +57,7 @@ export default function HypeSection() {
                 >
                     <img
                         src={`${process.env.PUBLIC_URL}/img/hype.jpg`}
-                        alt="Hype Image"
+                        alt="댄스 행사"
                     />
                 </motion.div>
             </div>

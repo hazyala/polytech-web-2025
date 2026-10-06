@@ -25,7 +25,7 @@ export default function LinkSection() {
             >
                 <img
                     src={`${process.env.PUBLIC_URL}/img/link.png`}
-                    alt="Link Background Image"
+                    alt="연습 파트너"
                 />
             </motion.div>
 
